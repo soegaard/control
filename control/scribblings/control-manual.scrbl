@@ -8,7 +8,7 @@
 @defmodule[control]
 
 @title{Control}
-
+@section{History}
 @index{control}
 @index{CL}
 @index{tagbody}
@@ -19,8 +19,6 @@
 @index{iteration}
 @index{goto}
 @index{label}
-
-@section{History}
 
 Version 2.0
 
