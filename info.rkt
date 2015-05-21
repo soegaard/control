@@ -1,5 +1,5 @@
 #lang info
-(define collection 'control)
+(define collection 'multi)
 (define version    "3.0")
 (define deps       '("base"))
 
