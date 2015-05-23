@@ -5,9 +5,11 @@
           control
           (for-label racket control))
 
+@title{Control}
+@author{@(author+email "Jens Axel Søgaard" "jensaxel@soegaard.net")}
+
 @defmodule[control]
 
-@title{Control}
 @section{History}
 @index{control}
 @index{CL}
