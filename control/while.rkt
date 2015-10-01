@@ -9,7 +9,7 @@
 (require (for-syntax syntax/parse))
 (define-syntax (while stx)
   (syntax-parse stx
-    [(_while test-expr body ...)
+    [(_while test body ...)
      #'(let loop ()
          (when test
            body ...
