@@ -110,15 +110,15 @@
                                ]
               [tags            (map car tag-exprs-list)])
          ; tag-exprs-list = ( (tag_1 (e1 ...))   (tag_2 (e2 ...)) ... )
-         (with-syntax ([go     (syntax-local-introduce (syntax/loc stx go))]
-                       [return (syntax-local-introduce (syntax/loc stx return))])
-           #`((let/cc go
-                (let ([return (lambda (v) (go (lambda () v)))])
+         (with-syntax ([go-id     (datum->syntax stx 'go)]
+                       [return-id (datum->syntax stx 'return)])
+           #`((let/cc go-id
+                (let ([return-id (lambda (v) (go-id (lambda () v)))])
                   (letrec
                       (#,@(map generate-binding 
                                (drop-right tag-exprs-list 1)
                                (cdr tags))
-                       #,(generate-last-binding (last tag-exprs-list) #'return))
+                       #,(generate-last-binding (last tag-exprs-list) #'return-id))
                     (#,first-tag))))))))]))
 
 (module+ test (require rackunit))
