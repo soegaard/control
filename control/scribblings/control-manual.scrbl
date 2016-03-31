@@ -135,10 +135,10 @@ Semantics:   The @scheme[tagged-begin] expression evaluates the expressions
              from left to right. When there are no more expressions to
              be evaluated @schemeresult[void] is returned.
 
-             If an expression evaluates (go @scheme[_tag] then control is transfered 
+             If an expression evaluates @scheme[(go _tag)] then control is transfered 
              to the expression following the tag. The tags have lexical scope. 
-             The dynamic extent of tag is indefinite. An @scheme[(go tag)] is allowed to 
-             tranfer control to an outer tagged-begin. The call @scheme[(go tag)] has the 
+             The dynamic extent of tag is indefinite. An @scheme[(go _tag)] is allowed to 
+             tranfer control to an outer tagged-begin. The call @scheme[(go _tag)] has the 
              proper tail recursive property, even in situation where the call 
              syntactically is not in tail position.
 
