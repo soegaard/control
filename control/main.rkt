@@ -9,4 +9,4 @@
          tagged-begin
          until
          while
-         begin/goto)
+         begin/goto goto label)
